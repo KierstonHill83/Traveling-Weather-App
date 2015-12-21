@@ -1,4 +1,7 @@
 // *** main dependencies *** //
+var dotenv = require('dotenv');
+dotenv.load();
+
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
@@ -6,6 +9,8 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var swig = require('swig');
+var http = require('http');
+var mongoose = require('mongoose');
 
 
 // *** routes *** //
