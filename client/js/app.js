@@ -8,7 +8,7 @@ app.config(function($routeProvider) {
       redirectTo: '/home'
     })
     .when('/home', {
-      templateUrl: '/views/partials/home',
+      templateUrl: '/views/partials/home.html',
       controller: 'homeController',
       access: {restricted: false}
     })
