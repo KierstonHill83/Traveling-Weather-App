@@ -22,14 +22,12 @@ var api = require('./routes/api.js');
 var app = express();
 
 
-// *** view engine *** //
-var swig = new swig.Swig();
-app.engine('html', swig.renderFile);
-app.set('view engine', 'html');
-
-
 // *** static directory *** //
 app.set('views', path.join(__dirname, 'views'));
+
+
+// *** config file *** //
+var config = require('./_config');
 
 
 // *** config middleware *** //
