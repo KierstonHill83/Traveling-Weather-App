@@ -4,7 +4,7 @@ var http = require('http');
 
 
 function weatherService(city, days, response) {
-  var url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + city + '&cnt=' + days+ '&APPID=ids.weatherId';
+  var url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + city + '&cnt=' + days+ '&APPID=weatherId';
   http.get(url, function(res) {
     var body = "";
     res.on('data', function(chunk) {

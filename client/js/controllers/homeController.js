@@ -12,7 +12,10 @@ app.controller('homeController', ['$scope', '$http', '$routeParams', '$location'
     .then(function(data) {
 
       $scope.date = data.data[0].dt;
-      $scope.dateResults = $scope.date + 1000;
+      // $scope.dateResults = $scope.date + 1000;
+      var newDate = new Date($scope.date);
+      $scope.dateResults = newDate.toDateString();
+      console.log($scope.dateResults);
 
       $scope.weather = data.data[0].temp.day;
       $scope.weatherResults = Math.round((1.8 * ($scope.weather - 273)) + 32);
