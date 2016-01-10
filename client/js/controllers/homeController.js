@@ -17,6 +17,8 @@ app.controller('homeController', ['$scope', '$http', '$routeParams', '$location'
       $scope.weather = data.data[0].temp.day;
       $scope.weatherResults = Math.round((1.8 * ($scope.weather - 273)) + 32);
 
+      $scope.description = data.data[0].weather[0].description;
+
     });
   };
 
