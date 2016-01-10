@@ -4,7 +4,7 @@ var http = require('http');
 
 
 function weatherService(city, days, response) {
-  var url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + city + '&cnt=' + days+ '&APPID=ids.weatherId';
+  var url = 'http://api.openweathermap.org/data/2.5/forecast/daily?q=' + city + '&cnt=' + days+ '&APPID=weatherID';
   http.get(url, function(res) {
     var body = "";
     res.on('data', function(chunk) {
@@ -28,10 +28,10 @@ function weatherService(city, days, response) {
 }
 
 // Weather data from openWeatherAPI
-router.get('/recipes/weather/:city/:days', function(req, res, next) {
+router.get('/weather/:city/:days', function(req, res, next) {
   var city = req.params.city;
   var days = req.params.days;
-  console.log(city);
+  console.log('city', city);
   weatherService(city, days, res);
 });
 
