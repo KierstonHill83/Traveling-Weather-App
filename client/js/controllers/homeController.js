@@ -12,7 +12,7 @@ app.controller('homeController', ['$scope', '$http', '$routeParams', '$location'
     .then(function(data) {
 
       $scope.date = data.data[0].dt;
-      $scope.dateRes = $scope.date + 1000;
+      $scope.dateRes = $scope.date * 1000;
       var newDate = new Date($scope.dateRes);
       $scope.dateResults = newDate.toDateString();
       console.log($scope.dateResults);
