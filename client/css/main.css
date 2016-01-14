@@ -31,6 +31,15 @@ p {
   font-size: 3em;
 }
 
+.fa-sun-o {
+  color: #FFD700;
+}
+
+.fa-cloud {
+  color: #3399FF;
+}
+
 hr {
   background-color: black;
+  height: 1px;
 }
