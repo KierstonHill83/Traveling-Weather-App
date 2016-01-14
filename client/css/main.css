@@ -2,6 +2,7 @@ body {
   padding: 50px;
   font-size: 16px;
   font-family: 'Poiret One', cursive;
+  background-color: #F0F0F0;
 }
 
 a {
@@ -16,4 +17,20 @@ h1 {
 
 h2, p, i {
   text-align: center;
+}
+
+h2 {
+  font-size: 3em;
+}
+
+p {
+  font-size: 2em;
+}
+
+.fa {
+  font-size: 3em;
+}
+
+hr {
+  background-color: black;
 }
