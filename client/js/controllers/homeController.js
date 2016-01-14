@@ -12,15 +12,16 @@ app.controller('homeController', ['$scope', '$http', '$routeParams', '$location'
     .then(function(data) {
 
       $scope.date = data.data[0].dt;
-      // $scope.dateResults = $scope.date + 1000;
-      var newDate = new Date($scope.date);
+      $scope.dateRes = $scope.date + 1000;
+      var newDate = new Date($scope.dateRes);
       $scope.dateResults = newDate.toDateString();
       console.log($scope.dateResults);
 
       $scope.weather = data.data[0].temp.day;
       $scope.weatherResults = Math.round((1.8 * ($scope.weather - 273)) + 32);
 
-      $scope.description = data.data[0].weather[0].description;
+      $scope.firstDescription = data.data[0].weather[0].description;
+      $scope.description = capitalize($scope.firstDescription);
 
     });
   };
@@ -28,3 +29,13 @@ app.controller('homeController', ['$scope', '$http', '$routeParams', '$location'
   $scope.getWeather();
 
 }]);
+
+///////////////////////
+// Helper Functions //
+//////////////////////
+
+function capitalize(str) {
+  return str.replace(/\w\S*/g, function(txt) {
+    return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+  });
+}

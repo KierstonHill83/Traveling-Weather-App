@@ -20,7 +20,8 @@ h2, p, i {
 }
 
 h2 {
-  font-size: 3em;
+  font-size: 2em;
+  font-weight: bold;
 }
 
 p {
@@ -28,7 +29,7 @@ p {
 }
 
 .fa {
-  font-size: 2em;
+  font-size: 50px;
 }
 
 .fa-sun-o {
