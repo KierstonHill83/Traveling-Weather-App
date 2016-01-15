@@ -1,3 +1,3 @@
-app.service('cityService', function() {
+app.service('weatherService', function() {
   this.city = "Denver, CO";
 });

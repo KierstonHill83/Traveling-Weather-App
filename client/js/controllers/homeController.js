@@ -1,10 +1,10 @@
-app.controller('homeController', ['$scope', '$http', '$routeParams', '$location', 'cityService', function($scope, $http, $routeParams, $location, cityService) {
+app.controller('homeController', ['$scope', '$http', '$routeParams', '$location', 'weatherService', function($scope, $http, $routeParams, $location, weatherService) {
 
-  $scope.city = cityService.city;
+  $scope.city = weatherService.city;
   $scope.days = '1';
 
   $scope.$watch('city', function() {
-    cityService.city = $scope.city;
+    weatherService.city = $scope.city;
   });
 
   $scope.getWeather = function() {
