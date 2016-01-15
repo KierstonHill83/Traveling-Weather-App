@@ -1,7 +1,7 @@
 app.controller('homeController', ['$scope', '$http', '$routeParams', '$location', 'weatherService', function($scope, $http, $routeParams, $location, weatherService) {
 
   $scope.city = weatherService.city;
-  $scope.days = '1';
+  $scope.days = '10';
 
   $scope.$watch('city', function() {
     weatherService.city = $scope.city;
@@ -38,4 +38,23 @@ function capitalize(str) {
   return str.replace(/\w\S*/g, function(txt) {
     return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
   });
+}
+
+
+function weatherIcon(str) {
+  var newStr = str.split(' ');
+  for (var i = 0; i < newStr.length; i++) {
+    if (newStr[i] === 'clear') {
+      // append the sun icon
+    }
+    else if (newStr[i] === 'snow') {
+      // append the snow icon
+    }
+    else if (newStr[i] === 'cloud') {
+      // append the cloud icon
+    }
+    else if (newStr[i] === 'rain') {
+      // append the raindrop icon
+    }
+  }
 }
