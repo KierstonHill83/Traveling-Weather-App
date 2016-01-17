@@ -28,11 +28,11 @@ p {
   font-size: 2em;
 }
 
-.fa {
+.fa, .wi {
   font-size: 50px;
 }
 
-.fa-sun-o {
+.fa-sun-o, .wi-day-sunny {
   color: #FFD700;
 }
 
