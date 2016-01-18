@@ -46,15 +46,19 @@ function weatherIcon(str) {
   for (var i = 0; i < newStr.length; i++) {
     if (newStr[i] === 'clear') {
       // append the sun icon
+      // <i class="wi wi-day-sunny"></i>
     }
     else if (newStr[i] === 'snow') {
       // append the snow icon
+      // <i class="wi wi-snowflake-cold"></i>
     }
     else if (newStr[i] === 'cloud') {
       // append the cloud icon
+      // <i class="wi wi-cloudy"></i>
     }
     else if (newStr[i] === 'rain') {
       // append the raindrop icon
+      // <i class="wi wi-raindrops"></i>
     }
   }
 }
