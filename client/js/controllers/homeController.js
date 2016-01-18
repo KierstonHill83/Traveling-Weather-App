@@ -45,6 +45,7 @@ function weatherIcon(str) {
   var newStr = str.split(' ');
   for (var i = 0; i < newStr.length; i++) {
     if (newStr[i] === 'clear') {
+      $("#weatherIcon").append()
       // append the sun icon
       // <i class="wi wi-day-sunny"></i>
     }
