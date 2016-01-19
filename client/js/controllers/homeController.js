@@ -22,6 +22,7 @@ app.controller('homeController', ['$scope', '$http', '$routeParams', '$location'
 
       $scope.firstDescription = data.data[0].weather[0].description;
       $scope.description = capitalize($scope.firstDescription);
+      weatherIcon($scope.firstDescription);
 
     });
   };
@@ -45,11 +46,12 @@ function weatherIcon(str) {
   var newStr = str.split(' ');
   for (var i = 0; i < newStr.length; i++) {
     if (newStr[i] === 'clear') {
-      $("#weatherIcon").append()
+      $("#weatherIcon").append('<p><i class="wi wi-day-sunny"></i></p>');
       // append the sun icon
       // <i class="wi wi-day-sunny"></i>
     }
     else if (newStr[i] === 'snow') {
+      $("#weatherIcon").append('<p><i class="wi wi-snowflake-cold"></i></p>');
       // append the snow icon
       // <i class="wi wi-snowflake-cold"></i>
     }
